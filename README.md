@@ -7,8 +7,11 @@ correspondientes a las ubicaciones de las unidades del metrobús para que pueda 
 consultado mediante un API Rest filtrando por unidad o por alcaldía.
 
 Requerimientos y reglas de negocio
+
   ● Presentar un diagrama con el diseño de su solución
+  
   ● Generar un modelo de datos y su DDL
+  
   ● Obtener la alcaldía correspondiente a cada posición, el candidato tendrá la libertad de
   elegir el método que consideré más adecuado.
   ● Almacenar la información en una base de datos

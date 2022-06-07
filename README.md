@@ -9,14 +9,10 @@ consultado mediante un API Rest filtrando por unidad o por alcaldía.
 Requerimientos y reglas de negocio
 
   ● Presentar un diagrama con el diseño de su solución
-  
   ● Generar un modelo de datos y su DDL
-  
-  ● Obtener la alcaldía correspondiente a cada posición, el candidato tendrá la libertad de
-  elegir el método que consideré más adecuado.
+  ● Obtener la alcaldía correspondiente a cada posición, el candidato tendrá la libertad de elegir el método que consideré más adecuado.
   ● Almacenar la información en una base de datos
-  ● Diseñar e implementar un API que permita consultar la información almacenada, con las
-  siguientes características:
+  ● Diseñar e implementar un API que permita consultar la información almacenada, con las siguientes características:
     ○ Obtener una lista de unidades disponibles
     ○ Consultar la ubicación de una unidad dado su ID
     ○ Obtener una lista de alcaldías disponibles

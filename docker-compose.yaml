@@ -1,0 +1,34 @@
+# docker-compose.yml
+version: "3.7"
+
+networks:
+  fluxit:
+    name: fluxit
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.13
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: metroCDMX
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./sql-data/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  server:
+    container_name: pipeline
+    image: oalmanzao/server
+    hostname: pipeline
+    networks:
+      - fluxit
+    ports:
+      - "4000:4000"
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_DATABASE: metroCDMX
+      MYSQL_ROOT_PASSWORD: root

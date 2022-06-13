@@ -1,5 +1,5 @@
-# Imagen oficial Python 3.7
-FROM python:3.7
+# Imagen oficial Python 3.8
+FROM python:3.8
 
 # Work Directory
 WORKDIR /app
@@ -17,4 +17,4 @@ RUN pip --no-cache-dir install -r requirements.txt
 COPY . /app
 
 # Correr la aplicacion
-CMD ["python", "api/app.py", "pro"]
+CMD ["uvicorn", "app:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "4000"]
